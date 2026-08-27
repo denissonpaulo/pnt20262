@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário</title>
+</head>
+<body>
+    <a href="../index.html"><img src="../icone/conect.jpg" alt="icone de conexão remota" /></a>
+    <p>
+
+        <h1>Formulário de cadastro de usuário</h1>
+
+        <form action="bd.html" method="get" name="cad_user">
+            <label>Informe seu nome:<input type="text" name="nome" id="nome" required ></label><br/>
+            <label>Informe sua senha:<input type="password" name="senha" id="senha" required></label><br/>
+            <label>Informe seu E-mail:<input type="email" name="email" id="email" placeholder="exemplo@suaempresa.com.br"></label><br/>
+            <label>Informe data de nascimento:<input type="date" name="nasc" id="nasc"></label><br/>
+
+            <b>Qual seu meio de transporte primario?</b><br/>
+            <label><input type="radio" name="transporte" id="transporte" value="carro"/>Carro</label><br/>
+            <label><input type="radio" name="transporte" id="transporte" value="bike"/>Bike</label><br/>
+            <label><input type="radio" name="transporte" id="transporte" value="nadando"/>Lancha</label><br/>
+            
+            <b>Qual seu meio de transporte secundario?</b><br/>
+            <label><input type="checkbox" name="busao" id="busao" value="onibus">Ônibus</label><br/>
+            <label><input type="checkbox" name="aviao" id="aviao" value="aviao">Avião</label><br/>
+            <label><input type="checkbox" name="barco" id="barco" value="barco">Barco</label><br/>
+
+        <b>Informe seu estado</b>
+	    <br/>
+	    <select name="estado">
+		    <option value="PE" selected/>PERNAMBUCO
+		    <option value="BA" />BAHIA
+		    <option value="PB" />PARAIBA
+		    <option value="PA"/>PARANÁ
+	    </select>
+
+        <br/><b>OBSERVAÇÃO</b><br/>
+	    <textarea rows="10" cols="30">
+	    O gato estava brincando no jardim.
+	    </textarea>
+            
+        <br/>
+        <input type="reset" value="Limpar">
+        <input type="submit" value="Enviar">
+        
+
+
+        </form>
+
+
+
+
+</body>
+</html>
