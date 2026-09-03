@@ -4,57 +4,76 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Manipulação e recebimento de dados</title>
+    <style type="text/css">
+        h1 {color:red}
+        legend {color:blue}
+    </style>
 </head>
 <body>
     <a href="../index.html"><img src="../icone/conect.jpg" alt="icone de conexão remota" /></a>
     <p>
 
         <h1>Formulário de Envio de Dados</h1>
-        <p>
-            <fieldset>
-                <form action="cripto/password.html" method="post">
-                    <legend>Envio de Arquivo</legend>
-                    <input type="file" name="anexar" id="anexar"/><br/>
-                    <input type="submit" value="Enviar"/>
-                </form>
-            </fieldset>
-        </p>
+        <div id="arquivo">
+            <p>
+                <fieldset>
+                    <form action="cripto/password.html" method="post">
+                        <legend>Envio de Arquivo</legend>
+                        <input type="file" name="anexar" id="anexar"/><br/>
+                        <input type="submit" value="Enviar"/>
+                    </form>
+                </fieldset>
+            </p>
+        </div>
+        <div id="pesquisa">
+            <p>
+                <fieldset>
+                    <form action="cripto/password.html" method="post">
+                        <legend>Google</legend>
+                        <input type="search" name="buscar" id="buscar"/>
+                        <input type="submit" value="Go"/>
+                    </form>
+                </fieldset>
+            </p>
+        </div>
 
-        <p>
-            <fieldset>
-                <form action="cripto/password.html" method="post">
-                    <legend>Google</legend>
-                    <input type="search" name="buscar" id="buscar"/>
-                    <input type="submit" value="Go"/>
-                </form>
-            </fieldset>
-        </p>
-
-        <p>
-            <fieldset>
-                <form action="cripto/password.html" method="post">
-                    <legend>URL</legend>
-                    <input type="url" name="url" id="url" placeholder="http://exemplo.com.br"/>
-                    <input type="submit" value="Enviar"/>
-                </form>
-            </fieldset>
-        </p>
-        <p>
-            <fieldset>
-                <form action="cripto/password.html" method="post">
-                    <legend>Assine nosso canal</legend>
-                    <label for="email"><input type="email" name="email" id="email"/></label>
-                    <input type="image" src="../icone/botao.png" alt="icone no formato de checado">
-                </form>
-            </fieldset>
-        </p>
-        <p>
-            <video src=""></video>
-        </p>
-        <p>
-            <audio src="../som/alarm.mp3">Alarme</audio>
-        </p>
-
+        <div id="url">
+            <p>
+                <fieldset>
+                    <form action="cripto/password.html" method="post">
+                        <legend>URL</legend>
+                        <input type="url" name="url" id="url" placeholder="http://exemplo.com.br"/>
+                        <input type="submit" value="Enviar"/>
+                    </form>
+                </fieldset>
+            </p>
+        </div>
+        <div id="newslatters">
+            <p>
+                <fieldset>
+                    <form action="cripto/password.html" method="post">
+                        <legend>Assine nosso canal</legend>
+                        <label for="email"><input type="email" name="email" id="email"/></label>
+                        <input type="image" src="../icone/botao.png" alt="icone no formato de checado">
+                    </form>
+                </fieldset>
+            </p>
+        </div>
+        <div id="multimida">
+            <p>
+                <video src="../midias/earthone.mp4" controls loop></video>
+            </p>som
+            <p>
+                <audio src="../midias/alarm.mp3" controls></audio>
+            </p>
+        </div>
+        <div id="mapas">
+            <p>
+                <label>Nossa Localização</label><br/>
+                <iframe src="https://www.google.com.br/maps/place/Escola+T%C3%A9cnica+Estadual+Gin%C3%A1sio+Pernambucano/@-8.0515981,-34.8827931,17z/data=!3m1!4b1!4m6!3m5!1s0x7ab187db07a840d:0xd02075371cbf769f!8m2!3d-8.0516034!4d-34.8802182!16s%2Fg%2F11b6nrdl9m?entry=ttu&g_ep=EgoyMDI2MDgzMS4wIKXMDSoASAFQAw%3D%3D" frameborder="0"></iframe>
+            </p>
+        </div>
+        
     
 </body>
 </html>
