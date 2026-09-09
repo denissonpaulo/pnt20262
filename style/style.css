@@ -1,0 +1,24 @@
+/* Declaração do estilo principal da pagina */
+
+h1 {
+    color: darkred;
+    font-size: 50px;
+}
+
+p {
+    color: #AAFF00;
+}
+
+b {
+    color:rgb(236, 94, 213);
+    font-size: 20px;
+}
+
+body {
+    background-color: rgb(244, 241, 177);
+    background-image: url(../midias/anime.gif);
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    background-position: top center;
+    background-size: 50vh;
+}
