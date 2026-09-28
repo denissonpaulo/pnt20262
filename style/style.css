@@ -5,6 +5,12 @@ h1 {
     font-size: 50px;
 }
 
+h1.bd {
+    margin-top: 20px;
+    margin-left: 250px;
+
+}
+
 p.italico {
     color: hsla(227, 65%, 20%, 0.854);
     text-align: left;
@@ -114,5 +120,43 @@ h1.planoH1 {
 img.flutuar {
     float: left;
     width: 200px;
+}
+
+p.bt-position {
+    position:relative;
+    top: 5px;
+    left: 250px;
+    background: red;
+    width: 50px;
+    height: 50px;
+}
+
+
+/* Classe base para todos os ícones */
+.icone {
+  background-image: url('../icone/newletters.png');
+  display: inline-block;
+  background-repeat: no-repeat;
+}
+
+/* Ícone 1 (Exemplo: tamanho 100x100px, posição 0 no topo) */
+.icone-home {
+  width: 100px;
+  height: 100px;
+  background-position: 0 0;
+}
+
+/* Ícone 2 (Exemplo: deslocado 32px para a esquerda) */
+.icone-busca {
+  width: 100px;
+  height: 100px;
+  background-position: -100px 0;
+}
+
+/* Ícone 3 (Exemplo: deslocado 64px para a esquerda) */
+.icone-config {
+  width: 100px;
+  height: 100px;
+  background-position: -200px 0;
 }
 
