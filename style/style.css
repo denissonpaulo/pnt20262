@@ -1,162 +1,161 @@
-/* Declaração do estilo principal da pagina */
+/* ================================================================= -
+   PROJETO PROFISSIONAL - CSS ÚNICO E UNIFICADO
+   Regras: Sem alteração de HTML, sem uso de :root ou bibliotecas externas extras.
+   ================================================================= */
 
-h1 {
-    color: darkred;
-    font-size: 50px;
-}
-
-h1.bd {
-    margin-top: 20px;
-    margin-left: 250px;
-
-}
-
-p.italico {
-    color: hsla(227, 65%, 20%, 0.854);
-    text-align: left;
-    text-indent: 50px;
-    font-family: Arial, Helvetica, sans-serif;
-    font-style: italic;
-    font-size: 2em;
-}
-
-p.normal {
-    color: hsla(96, 64%, 20%, 0.854);
-    text-align: justify;
-    text-indent: 50px;
-    font-family: Arial, Helvetica, sans-serif;
-    font-style: normal;
-    font-size: 30px;
-}
-
-
-p.oblique {
-    color: hsla(295, 58%, 40%, 0.854);
-    text-align: right;
-    text-indent: 50px;
-    font-family: Arial, Helvetica, sans-serif;
-    font-style: oblique;
-    font-size: 114%;
-}
-
-
-b {
-    color:rgba(236, 94, 212, 0.98);
-    font-size: xx-large;
-}
-
+/* Configurações Gerais do Corpo e Fundo */
 body {
-    background-color: rgb(248, 248, 231);
-    background-image: url(../midias/anime.gif);
-    background-repeat: no-repeat;
-    background-attachment: scroll;
-    background-position: top center;
-    background-size: 50vh;
+    background-color: #f8f9fa;
+    background-image: none; /* Remove fundos ruidosos anteriores para uma estética limpa */
+    color: #333333;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+    margin: 0;
+    padding: 20px;
 }
 
+/* Tipografia e Cabeçalhos */
+h1 {
+    color: #1a365d;
+    font-size: 2.2rem;
+    font-weight: 700;
+    text-decoration: none;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #e2e8f0;
+    padding-bottom: 10px;
+}
+
+h2, h3, h4, h5, h6 {
+    color: #2d3748;
+    font-weight: 600;
+}
+
+/* Parágrafos Padronizados */
+p {
+    color: #4a5568;
+    margin-left: 0; /* Alinhamento padrão mais limpo, removendo recuos excessivos */
+    text-align: left;
+    margin-bottom: 15px;
+}
+
+/* Links e Interatividade */
 a {
-    text-decoration: underline double #02ffcc;
-    text-transform: capitalize;
-    display: inline;
-    
+    color: #0d6efd;
+    text-decoration: none;
+    transition: color 0.2s ease-in-out;
 }
 
 a:hover {
-    color: #f0f
+    color: #0b5ed7;
+    text-decoration: underline;
 }
 
-li.nOrdenada {
-    list-style-image: url(../icone/newletters.png);
-    background-size: 4px 4px;
+a.removeSublinhado {
+    text-decoration: none;
 }
 
-li.ordenada {
-    list-style-type: upper-alpha;
+a.bt {
+    color: #ffffff;
+}
+
+/* Botões e Menu (Integrados com Bootstrap) */
+#botoes_menu {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 25px;
+}
+
+.btn {
+    border-radius: 6px;
+    font-weight: 500;
+    padding: 8px 16px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+/* Listas */
+ul {
+    text-indent: 0;
+    list-style-position: outside;
+    padding-left: 20px;
+}
+
+li.uppercase {
+    text-transform: uppercase;
+}
+
+li.lowercase {
+    text-transform: lowercase;
+}
+
+li.capitalize {
+    text-transform: capitalize;
+}
+
+li.italico {
+    font-style: italic;
+    font-size: clamp(1rem, 1.5vw + 0.5rem, 1.5rem);
+}
+
+/* Tabelas com Design Corporativo Limpo */
+table {
+    background-color: #ffffff;
+    width: 100%;
+    border-collapse: collapse;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    margin-top: 20px;
+    margin-bottom: 20px;
 }
 
 table, th, td {
-    border: solid 5px rgb(159, 35, 35);
-    width: 100%;
-    height: 50px;
-    padding: 10px 30px 50px 50px;
+    border: 1px solid #e2e8f0;
 }
 
-.todos {
-    color: #f0f;
+th {
+    background-color: #f1f5f9;
+    color: #1e293b;
+    height: 45px;
+    font-weight: 600;
+    text-align: left;
+    padding: 12px 16px;
 }
 
-.standard {
-    color: blue;
+td {
+    padding: 12px 16px;
+    color: #475569;
 }
 
-.luxo {
-    color: rgb(111, 255, 0);
+tr:nth-child(even) {
+    background-color: #f8fafc;
 }
 
-#identificador {
-    color: darkgreen;
-    font-size: 1.5em;
+/* Classes Auxiliares de Texto e Legendas */
+span.vermelho {
+    color: #e53e3e;
+    text-decoration: none;
     font-weight: bold;
 }
 
-.tabelas-body {
-    margin: 20px 40px 30px 40px;
+legend.arquivo {
+    color: #3182ce;
+    text-decoration: none;
+    font-weight: 600;
 }
 
-h1.planoH1 {
-    background: orange;
-    padding: 10px 10px 10px 30px;
-    border: 4px solid black;
-    width: 350px;
-    height: 150px;
+legend.pesquisa {
+    color: #718096;
+    text-decoration: line-through;
 }
 
-.planoP {
-    background: yellow;
-    padding: 50px;
-    clear: both;
+legend.noticias {
+    color: #dd6b20;
+    font-weight: 600;
 }
 
-img.flutuar {
-    float: left;
-    width: 200px;
+legend.pagina {
+    color: #805ad5;
+    font-weight: 600;
 }
-
-p.bt-position {
-    position:relative;
-    top: 5px;
-    left: 250px;
-    background: red;
-    width: 50px;
-    height: 50px;
-}
-
-
-/* Classe base para todos os ícones */
-.icone {
-  background-image: url('../icone/newletters.png');
-  display: inline-block;
-  background-repeat: no-repeat;
-}
-
-/* Ícone 1 (Exemplo: tamanho 100x100px, posição 0 no topo) */
-.icone-home {
-  width: 100px;
-  height: 100px;
-  background-position: 0 0;
-}
-
-/* Ícone 2 (Exemplo: deslocado 32px para a esquerda) */
-.icone-busca {
-  width: 100px;
-  height: 100px;
-  background-position: -100px 0;
-}
-
-/* Ícone 3 (Exemplo: deslocado 64px para a esquerda) */
-.icone-config {
-  width: 100px;
-  height: 100px;
-  background-position: -200px 0;
-}
-
