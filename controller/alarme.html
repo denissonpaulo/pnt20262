@@ -10,7 +10,7 @@
 
 </head>
 <body>
-    <audio id="sound" src="alarm.mp3" style="display: none;"></audio>
+    <audio id="sound" src="../midias/alarm.mp3" style="display: none;"></audio>
 
     <div class="container">
         <h2>Minutos:</h2>
@@ -24,59 +24,64 @@
 
         <div id="display">
             <h3></h3>
-        </div> </div> <script>
-        var display = document.getElementById('display');
+        </div> </div> 
 
-        var minutos = document.getElementById('minutos');
-        var segundos = document.getElementById('segundos');
+        <script>
+            var display = document.getElementById('display');
 
-        var comecar = document.getElementById('comecar');
+            var minutos = document.getElementById('minutos');
+            var segundos = document.getElementById('segundos');
+
+            var comecar = document.getElementById('comecar');
 
 
-        var cronometroSeg;
+            var cronometroSeg;
 
-        var minutoAtual;
-        var segundoAtual;
+            var minutoAtual;
+            var segundoAtual;
 
-        var interval;
+            var interval;
 
-        for(var i=0; i<=59; i++){
-            minutos.innerHTML+='<option value="'+i+'">'+i+'<option>';
-        }
+            for(var i=0; i<=59; i++){
+                minutos.innerHTML+='<option value="'+i+'">'+i+'<option>';
+            }
 
-        for(var i=0; i<=59; i++){
-            segundos.innerHTML+='<option value="'+i+'">'+i+'<option>';
-        }
+            for(var i=0; i<=59; i++){
+                segundos.innerHTML+='<option value="'+i+'">'+i+'<option>';
+            }
 
-        comecar.addEventListener('click', function(){
-            minutoAtual = minutos.value;
-            segundoAtual = segundos.value;
-
-            display.childNodes[1].innerHTML = minutoAtual + ":"+segundoAtual;
-
-            interval = setInterval(function() {
-                segundoAtual--;
-                if (segundoAtual<= 0) {
-                    if (minutoAtual>0) {
-                        minutoAtual--;
-                        segundoAtual = 59;
-                    }
-                    else{
-                        document.getElementById("sound").play();
-                        alert("Desligar Alarme!");
-                        clearInterval(interval);
-                        location.reload();
-                        
-                    }
-                }
+            comecar.addEventListener('click', function(){
+                minutoAtual = minutos.value;
+                segundoAtual = segundos.value;
 
                 display.childNodes[1].innerHTML = minutoAtual + ":"+segundoAtual;
-            },1000);
 
-        }
-        
-        
-        );
+                interval = setInterval(function() {
+                    segundoAtual--;
+                    if (segundoAtual<= 0) {
+                        if (minutoAtual>0) {
+                            minutoAtual--;
+                            segundoAtual = 59;
+                        }
+                        else{
+                            document.getElementById("sound").play();
+                            alert("Desligar Alarme!");
+                            clearInterval(interval);
+                            location.reload();
+                            
+                        }
+                    }
+
+                    display.childNodes[1].innerHTML = minutoAtual + ":"+segundoAtual;
+                },1000);
+
+            }
+            
+            
+            );
+
+
+            
 
     </script>
 
