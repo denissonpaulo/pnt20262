@@ -20,12 +20,14 @@ var resp = window.document.getElementById('saida');
 
 function acao1() {
     resp.innerHTML += '<p>Clicou no primeiro botão</p>'
+
+    //const pi = 3.14; constante não pode ser alterada, diferente de var e let.
     
-    var a = prompt("Informe um número");
-    if (a != "6") { 	
-        resp.innerHTML += '<h1>Diferente de 6</h1>';
+    let pi = prompt("Informe um número");
+    if (pi === "3.14") { // === compara valor e tipo, == compara apenas valor.	
+        resp.innerHTML += '<h1>Igual a 3.14 (valor/tipo)</h1>';
     } else {				
-        resp.innerHTML += '<h1>Igual a 6</h1>';
+        resp.innerHTML += '<h1>Diferente de 3.14 (valor ou tipo)</h1>';
     }
 }
 
@@ -52,7 +54,7 @@ function acao2() {
 function acao3() {
     resp.innerHTML += '<p>Clicou no terceiro botão</p>'
 
-    var numero = prompt("Informe um número");
+    let numero = prompt("Informe um número");
     for (i = 0; i < numero; i++){
         resp.innerHTML += '<p>Paragrafo ' + i + '</p>';
     }
