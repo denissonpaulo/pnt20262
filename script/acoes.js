@@ -55,7 +55,7 @@ function acao3() {
     resp.innerHTML += '<p>Clicou no terceiro botão</p>'
 
     let numero = prompt("Informe um número");
-    for (i = 0; i < numero; i++){
+    for (let i = 0; i < numero; i++){
         resp.innerHTML += '<p>Paragrafo ' + i + '</p>';
     }
 }
@@ -63,21 +63,21 @@ function acao3() {
 function acao4() {
     resp.innerHTML += '<p>Clicou no quarto botão</p>'
 
-    var var1  = prompt("Informe um número");
-    while (var1 <= 10) {	
-         resp.innerHTML += 'linha '+var1+'<br/>';
-         var1++;
+    let x  = prompt("Informe um número");
+    while (x <= 10) {	
+         resp.innerHTML += 'linha '+x+'<br/>';
+         x++;
     }    
 }
 
 function acao5() {
     resp.innerHTML += '<p>Clicou no quinto botão</p>'
 
-    var var1 = prompt("Informe um número");
+    let x = prompt("Informe um número");
     do {	
-        resp.innerHTML += 'linha '+var1+'<br/>';
-        var1++;
-   } while (var1 <= 10);  
+        resp.innerHTML += 'linha '+x+'<br/>';
+        x++;
+   } while (x <= 10);  
 }
 
 function acao6() {
@@ -93,8 +93,8 @@ function acao6() {
 
 function acao7() {
     
-    var entrada = "Bem vindo " + prompt("Informe seu Nome: ");
-    var saldacao = document.getElementById('titulo');
+    let entrada = "Bem vindo " + prompt("Informe seu Nome: ");
+    let saldacao = document.getElementById('titulo');
     saldacao.textContent = entrada;    
 
     const collection = document.getElementsByName("animal");
@@ -108,7 +108,7 @@ function acao7() {
 
     document.getElementsByTagName("p")[1].innerHTML = "Texto do paragrafo 2 substituido com sucesso!";
 
-    var teste = document.getElementsByName("paragrafo");
+    let teste = document.getElementsByName("paragrafo");
     teste[1].textContent = 'Texto do paragrafo identificado por "paragrafo" na posição 1, substituido com sucesso!';
 }
 
@@ -117,25 +117,24 @@ function acao8() {
     resp.innerHTML += '<p>Clicou no oitavo botão</p>';
 
     function calcularArea() {
-        var area = 3*5;
+        let area = 3*5;
         resp.innerHTML +=  '<h1>Área total: '+ area +'</h1>';
     }
     calcularArea();
          
 }
 
-
 function acao9() {
     resp.innerHTML += '<p>Clicou no nono botão</p>'
 
-    var largura = prompt("Informe largura");
-    var altura = prompt("Informe altura");
+    let largura = prompt("Informe largura");
+    let altura = prompt("Informe altura");
 
     function getArea(width, height) {
-        var calculateArea = width * height;
+        let calculateArea = width * height;
         return calculateArea;
     }
-    var area = getArea(largura, altura);
+    let area = getArea(largura, altura);
     resp.innerHTML +=  '<h1>Área total: '+ area +'</h1>';	
 }
 
@@ -144,7 +143,7 @@ function acao10() {
     resp.innerHTML += '<p>Clicou no decimo botão</p>'
 
     // Set Item
-    var login = ['user', '********'];
+    let login = ['user', '********'];
     sessionStorage.setItem("acessoOn", login);
     // Retrieve
     document.getElementById("session").innerHTML = sessionStorage.getItem("acessoOn");
