@@ -153,7 +153,7 @@ function acao10() {
 function acao11() {
     resp.innerHTML += '<p>Clicou no decimo primeiro botão</p>'
     //Criando um objeto notação literal.
-    var hotel = { //O objeto é declarado como uma variavel.
+    let hotel = { //O objeto é declarado como uma variavel.
         nome: 'Por do Sol', //as chaves são separadas do seu valor por dois pontos. Igual ao CSS.
         quartos: 40, //Separa com virgula cada propriedade e método.
         reservados: 25,
@@ -161,14 +161,14 @@ function acao11() {
         tipoQuarto: ['simples', 'duplo', 'suite'],
 
         checkAvailability: function () {
-            return this.quartos - this.reservados; //this = este objeto (objeto atual)
-        } //A palavra chave this indica que ele usa as prorpiedades deste objeto.
+            return this.quartos - this.reservados; //this = este objeto (objeto hotel)
+        } //A palavra chave this indica que ele usa as prorpiedades do objeto atual.
     };
 
-    var atrNome = document.getElementById('nome');
+    let atrNome = document.getElementById('nome');
     atrNome.textContent = hotel.nome; //Acessando um objeto com a notação de ponto.
     //O ponto é conhecido como: Operador de membro.
-    var atrQuartos = document.getElementById('quartos');
+    let atrQuartos = document.getElementById('quartos');
     atrQuartos.textContent = hotel.checkAvailability();  
 }
 
@@ -233,7 +233,9 @@ function acao13() {
     ];
 
     for (var i = 0; i < listaObj.length; i++) {
-        document.getElementById('item').innerHTML += 'Item: <b>' + listaObj[i].nome + ' </b>' + 'Área Ocupada: <b>' + listaObj[i].checkAreaOcupada() + ' </b>' +'Peso: <b>' + listaObj[i].peso + ' </b> <br/>'; 
+        document.getElementById('item').innerHTML += 'Item: <b>' + listaObj[i].nome + ' </b>' + 
+        'Área Ocupada: <b>' + listaObj[i].checkAreaOcupada() + ' </b>' +
+        'Peso: <b>' + listaObj[i].peso + ' </b> <br/>'; 
     }
 }
 
