@@ -86,8 +86,7 @@ function acao6() {
     var myArray = [1,2,3,4,5,6,7,8,9,10,11];
 
     myArray.forEach(function(value, key) {
-        resp.innerHTML += 'Chave: '+key+' Valor: '+value+'<br/>';
-        //document.write(value+' ', key+'<br/>'); 
+        resp.innerHTML += 'Chave: '+key+' Valor: '+value+'<br/>'; 
     }); 
 }
 
@@ -107,7 +106,6 @@ function acao7() {
     resp.innerHTML += 'Clicou no setimo botão'
 
     document.getElementsByTagName("p")[1].innerHTML = "Texto do paragrafo 2 substituido com sucesso!";
-
     let teste = document.getElementsByName("paragrafo");
     teste[1].textContent = 'Texto do paragrafo identificado por "paragrafo" na posição 1, substituido com sucesso!';
 }
@@ -115,26 +113,22 @@ function acao7() {
 
 function acao8() {
     resp.innerHTML += '<p>Clicou no oitavo botão</p>';
-
     function calcularArea() {
         let area = 3*5;
         resp.innerHTML +=  '<h1>Área total: '+ area +'</h1>';
     }
-    calcularArea();
-         
+    calcularArea();        
 }
 
 function acao9() {
     resp.innerHTML += '<p>Clicou no nono botão</p>'
-
     let largura = prompt("Informe largura");
     let altura = prompt("Informe altura");
-
-    function getArea(width, height) {
+    function getArea(width, height) {  //Solicita 2 parametros
         let calculateArea = width * height;
         return calculateArea;
     }
-    let area = getArea(largura, altura);
+    let area = getArea(largura, altura);     
     resp.innerHTML +=  '<h1>Área total: '+ area +'</h1>';	
 }
 
